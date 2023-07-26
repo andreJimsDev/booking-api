@@ -20,10 +20,16 @@ import { CreateBookingUseCase } from '../../application/use-cases/booking/create
 import { CancelBookingUseCase } from '../../application/use-cases/booking/cancel-booking.use-case';
 import { FetchAllBookingUseCase } from '../../application/use-cases/booking/fetch-all-booking.use-case';
 import { MessagingModule } from '../messaging/messaging.module';
+import { BookingController } from './controllers/booking/booking.controller';
 
 @Module({
   imports: [DatabaseModule, SecurityModule, MessagingModule],
-  controllers: [AuthController, TrajetController, SiegeController],
+  controllers: [
+    AuthController,
+    TrajetController,
+    SiegeController,
+    BookingController,
+  ],
   providers: [
     SignInUseCase,
     SignUpUseCase,
